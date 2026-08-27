@@ -18,7 +18,7 @@
         <!-- Main Navigation -->
         <div class="px-3 pt-2 pb-1 text-uppercase text-muted fw-bold fs-8 tracking-wider">Main Navigation</div>
         <div class="nav flex-column nav-pills custom-sidebar-nav">
-            <a href="#"
+            <a href="/dashboard"
                 class="nav-link d-flex align-items-center justify-content-between px-3 py-2.5 rounded-3 mb-1 text-secondary">
                 <div class="d-flex align-items-center gap-2.5">
                     <i class="bi bi-grid-1x2-fill fs-5"></i>
@@ -99,6 +99,19 @@
                     <span class="fw-semibold">Settings</span>
                 </div>
             </a>
+        </div>
+        <div class="p-5"></div>
+        <div class="px-3 pt-5 pb-1 text-uppercase text-danger fw-bold fs-7 tracking-wider">
+            <form action="{{ route('logout') }}" method="POST">
+                @csrf
+                <button type="submit"
+                    class="nav-link d-flex align-items-center justify-content-between px-3 py-2.5 rounded-3 mb-1 text-secondary">
+                    <div class="d-flex align-items-center gap-2.5">
+                        <i class="bi bi-box-arrow-right fs-5 text-danger"></i>
+                        <span class="fw-bold ml-2 text-danger">Logout</span>
+                    </div>
+                </button>
+            </form>
         </div>
     </div>
 
