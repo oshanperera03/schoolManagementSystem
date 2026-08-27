@@ -5,3 +5,36 @@
 [x-cloak] {
     display: none;
 }
+
+/* Custom Admin Dashboard Styling */
+.fs-7 { font-size: 0.825rem; }
+.fs-8 { font-size: 0.75rem; }
+.tracking-wider { letter-spacing: 0.05em; }
+
+.bg-primary-subtle { background-color: #e0e7ff !important; }
+.text-primary-subtle { color: #4338ca !important; }
+
+.bg-success-subtle { background-color: #dcfce7 !important; }
+.text-success-subtle { color: #15803d !important; }
+
+.bg-warning-subtle { background-color: #fef9c3 !important; }
+.text-warning-subtle { color: #a16207 !important; }
+
+.bg-info-subtle { background-color: #e0f2fe !important; }
+.text-info-subtle { color: #0369a1 !important; }
+
+.bg-secondary-subtle { background-color: #f1f5f9 !important; }
+.text-secondary-subtle { color: #475569 !important; }
+
+.card {
+    transition: transform 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.table-hover tbody tr:hover {
+    background-color: #f8fafc !important;
+}
+
+.avatar-circle {
+    user-select: none;
+    font-weight: 600;
+}
