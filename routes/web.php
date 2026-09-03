@@ -23,4 +23,10 @@ Route::middleware([
     Route::get('/classes', function () {
         return view('classes');
     })->name('classes');
+    Route::get('/students/create', function () {
+        return view('addStudent');
+    })->name('students.create');
+    Route::get('/teachers/create', function () {
+        return view('addTeacher');
+    })->name('teachers.create');
 });

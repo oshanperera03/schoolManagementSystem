@@ -12,10 +12,12 @@
             </div>
             <div class="d-flex gap-2 mt-3 mt-md-0">
 
-                <button type="button"
+                <a href="/students/create">
+                    <button type="button"
                     class="btn btn-primary btn-sm d-flex align-items-center gap-1.5 rounded-2 px-3 fw-medium shadow-sm">
                     <i class="bi bi-plus-circle-fill"></i> Add New Student
                 </button>
+                </a>
             </div>
         </div>
 

@@ -12,10 +12,12 @@
             </div>
             <div class="d-flex gap-2 mt-3 mt-md-0">
 
-                <button type="button"
-                    class="btn btn-primary btn-sm d-flex align-items-center gap-1.5 rounded-2 px-3 fw-medium shadow-sm">
-                    <i class="bi bi-plus-circle-fill"></i> Add New Teacher
-                </button>
+                <a href="/teachers/create">
+                    <button type="button"
+                        class="btn btn-primary btn-sm d-flex align-items-center gap-1.5 rounded-2 px-3 fw-medium shadow-sm">
+                        <i class="bi bi-plus-circle-fill"></i> Add New Teacher
+                    </button>
+                </a>
             </div>
         </div>
 
@@ -24,8 +26,8 @@
             <thead class="bg-light text-muted fs-8 text-uppercase tracking-wider">
                 <tr>
                     <th scope="col"></th>
-                    <th scope="col">Student Name</th>
-                    <th scope="col">Student ID</th>
+                    <th scope="col">Teacher Name</th>
+                    <th scope="col">Teacher ID</th>
                     <th scope="col">Class & Section</th>
                     <th scope="col">Guardian Contact</th>
                     <th scope="col">Enrollment Date</th>
