@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\StudentController;
+use App\Http\Controllers\TeacherController;
 
 Route::get('/', function () {
     return redirect()->route('login');
@@ -15,12 +16,8 @@ Route::middleware([
     Route::get('/dashboard', function () {
         return view('dashboard');
     })->name('dashboard');
-    Route::get('/students', function () {
-        return view('students');
-    })->name('students');
-    Route::get('/teachers',function () {
-        return view('teachers');
-    })->name('teachers');
+    Route::get('/students', [StudentController::class, 'index']);
+    Route::get('/teachers',[TeacherController::class, 'index']);
     Route::get('/classes', function () {
         return view('classes');
     })->name('classes');
@@ -31,4 +28,5 @@ Route::middleware([
         return view('addTeacher');
     })->name('teachers.create');
     Route::post('save-student', [StudentController::class, 'saveStudent'])->name('student.save');
+    Route::post('save-teacher', [TeacherController::class, 'saveTeacher'])->name('teacher.save');
 });

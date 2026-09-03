@@ -12,6 +12,11 @@ class StudentController extends Controller
     {
         $this->student = new Student();
     }
+    public function index()
+    {
+        $response['students']= $this->student->all();
+        return view('students')->with($response);
+    }
     public function saveStudent(Request $request)
     {
         $validatedData = $request->validate([

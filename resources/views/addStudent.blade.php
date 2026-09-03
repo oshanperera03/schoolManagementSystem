@@ -8,8 +8,8 @@
 
                 <div>
                     <x-label for="stu_name" value="{{ __('Student Name') }}" />
-                    <x-input id="stu_name" class="block mt-1 w-full" type="text" name="stu_name"
-                        :value="old('stu_name')" required autofocus autocomplete="name" />
+                    <x-input id="stu_name" class="block mt-1 w-full" type="text" name="stu_name" :value="old('stu_name')"
+                        required autofocus autocomplete="name" />
                 </div>
 
                 <div class="mt-4">
@@ -20,18 +20,20 @@
 
                 <div class="mt-4">
                     <x-label for="stu_address" value="{{ __('Address') }}" />
-                    <x-input id="stu_address" class="block mt-1 w-full" type="text" name="stu_address" :value="old('stu_address')"
-                        required autocomplete="stu_address" />
+                    <x-input id="stu_address" class="block mt-1 w-full" type="text" name="stu_address"
+                        :value="old('stu_address')" required autocomplete="stu_address" />
                 </div>
                 <div class="mt-4">
                     <x-label for="stu_gender" value="{{ __('Gender') }}" />
                     <div class="mt-2 flex items-center gap-4">
                         <label class="inline-flex items-center">
-                            <input type="radio" name="stu_gender" value="male" class="text-indigo-600" {{ old('stu_gender') === 'male' ? 'checked' : '' }} required>
+                            <input type="radio" name="stu_gender" value="male" class="text-indigo-600"
+                                {{ old('stu_gender') === 'male' ? 'checked' : '' }} required>
                             <span class="ml-2">{{ __('Male') }}</span>
                         </label>
                         <label class="inline-flex items-center">
-                            <input type="radio" name="stu_gender" value="female" class="text-indigo-600" {{ old('stu_gender') === 'female' ? 'checked' : '' }}>
+                            <input type="radio" name="stu_gender" value="female" class="text-indigo-600"
+                                {{ old('stu_gender') === 'female' ? 'checked' : '' }}>
                             <span class="ml-2">{{ __('Female') }}</span>
                         </label>
                     </div>
@@ -50,21 +52,24 @@
                 <div class="mt-4">
                     <x-label for="stu_email" value="{{ __('Email') }}" />
                     <x-input id="stu_email" class="block mt-1 w-full" type="email" name="stu_email" :value="old('stu_email')"
-                        required autocomplete="stu_email" />
+                        autocomplete="stu_email" />
                 </div>
                 <div class="mt-4">
                     <x-label for="stu_admissionDate" value="{{ __('Admission Date') }}" />
-                    <x-input id="stu_admissionDate" class="block mt-1 w-full" type="date" name="stu_admissionDate" :value="old('stu_admissionDate')"
-                        required autocomplete="stu_admissionDate" />
+                    <x-input id="stu_admissionDate" class="block mt-1 w-full" type="date" name="stu_admissionDate"
+                        :value="old('stu_admissionDate')" required autocomplete="stu_admissionDate" />
                 </div>
 
+
                 <div class="flex items-center justify-end mt-4">
+                    <a href="{{ url('/students') }}" >
+                        Back
+                    </a>
                     <x-button class="ml-4">
                         {{ __('Add Student') }}
                     </x-button>
+                </div>
             </form>
         </div>
     </div>
-
-
 </x-guest-layout>
