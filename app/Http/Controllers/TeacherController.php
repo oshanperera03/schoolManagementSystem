@@ -15,7 +15,7 @@ class TeacherController extends Controller
     public function index()
     {
         $response['teachers']= $this->teacher->all();
-        return view('teachers')->with($response);
+        return view('pages.teacher.teachers')->with($response);
     }
     public function saveTeacher(Request $request)
     {

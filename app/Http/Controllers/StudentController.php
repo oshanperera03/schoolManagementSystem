@@ -15,7 +15,7 @@ class StudentController extends Controller
     public function index()
     {
         $response['students']= $this->student->all();
-        return view('students')->with($response);
+        return view('pages.student.students')->with($response);
     }
     public function saveStudent(Request $request)
     {
@@ -32,6 +32,11 @@ class StudentController extends Controller
 
         $this->student->create($validatedData);
         return redirect()->back();
+    }
+    public function editStudent($id)
+    {
+        $response['student'] = $this->student->findOrFail($id);
+        return view('pages.student.editStudent')->with($response);
     }
 
 }

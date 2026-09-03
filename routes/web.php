@@ -19,14 +19,15 @@ Route::middleware([
     Route::get('/students', [StudentController::class, 'index']);
     Route::get('/teachers',[TeacherController::class, 'index']);
     Route::get('/classes', function () {
-        return view('classes');
+        return view('pages.class.classes');
     })->name('classes');
     Route::get('/students/create', function () {
-        return view('addStudent');
+        return view('pages.student.addStudent');
     })->name('students.create');
     Route::get('/teachers/create', function () {
-        return view('addTeacher');
+        return view('pages.teacher.addTeacher');
     })->name('teachers.create');
     Route::post('save-student', [StudentController::class, 'saveStudent'])->name('student.save');
     Route::post('save-teacher', [TeacherController::class, 'saveTeacher'])->name('teacher.save');
+    Route::get('students/edit/{id}', [StudentController::class, 'editStudent'])->name('student.edit');
 });
