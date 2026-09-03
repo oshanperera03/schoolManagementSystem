@@ -3,7 +3,7 @@
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    return view('welcome');
+    return redirect()->route('login');
 });
 
 Route::middleware([
@@ -17,4 +17,10 @@ Route::middleware([
     Route::get('/students', function () {
         return view('students');
     })->name('students');
+    Route::get('/teachers',function () {
+        return view('teachers');
+    })->name('teachers');
+    Route::get('/classes', function () {
+        return view('classes');
+    })->name('classes');
 });
