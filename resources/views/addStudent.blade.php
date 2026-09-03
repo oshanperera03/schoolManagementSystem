@@ -3,59 +3,59 @@
     <div class="min-h-screen flex flex-col sm:justify-center items-center pt-6 sm:pt-0 bg-gray-100">
         <div class="w-full sm:max-w-md mt-6 px-6 py-4 bg-white shadow-md overflow-hidden sm:rounded-lg">
 
-            <form method="" action="">
+            <form method="POST" action="{{ route('student.save') }}">
                 @csrf
 
                 <div>
-                    <x-label for="student_name" value="{{ __('Student Name') }}" />
-                    <x-input id="student_name" class="block mt-1 w-full" type="text" name="student_name"
-                        :value="old('student_name')" required autofocus autocomplete="name" />
+                    <x-label for="stu_name" value="{{ __('Student Name') }}" />
+                    <x-input id="stu_name" class="block mt-1 w-full" type="text" name="stu_name"
+                        :value="old('stu_name')" required autofocus autocomplete="name" />
                 </div>
 
                 <div class="mt-4">
-                    <x-label for="admission_number" value="{{ __('Admission Number') }}" />
-                    <x-input id="admission_number" class="block mt-1 w-full" type="text" name="admission_number"
-                        :value="old('admission_number')" required autofocus autocomplete="admission-number" />
+                    <x-label for="stu_admissionNo" value="{{ __('Admission Number') }}" />
+                    <x-input id="stu_admissionNo" class="block mt-1 w-full" type="text" name="stu_admissionNo"
+                        :value="old('stu_admissionNo')" required autofocus autocomplete="stu_admissionNo" />
                 </div>
 
                 <div class="mt-4">
-                    <x-label for="address" value="{{ __('Address') }}" />
-                    <x-input id="address" class="block mt-1 w-full" type="text" name="address" :value="old('address')"
-                        required autocomplete="address" />
+                    <x-label for="stu_address" value="{{ __('Address') }}" />
+                    <x-input id="stu_address" class="block mt-1 w-full" type="text" name="stu_address" :value="old('stu_address')"
+                        required autocomplete="stu_address" />
                 </div>
                 <div class="mt-4">
-                    <x-label for="gender" value="{{ __('Gender') }}" />
+                    <x-label for="stu_gender" value="{{ __('Gender') }}" />
                     <div class="mt-2 flex items-center gap-4">
                         <label class="inline-flex items-center">
-                            <input type="radio" name="gender" value="male" class="text-indigo-600" {{ old('gender') === 'male' ? 'checked' : '' }} required>
+                            <input type="radio" name="stu_gender" value="male" class="text-indigo-600" {{ old('stu_gender') === 'male' ? 'checked' : '' }} required>
                             <span class="ml-2">{{ __('Male') }}</span>
                         </label>
                         <label class="inline-flex items-center">
-                            <input type="radio" name="gender" value="female" class="text-indigo-600" {{ old('gender') === 'female' ? 'checked' : '' }}>
+                            <input type="radio" name="stu_gender" value="female" class="text-indigo-600" {{ old('stu_gender') === 'female' ? 'checked' : '' }}>
                             <span class="ml-2">{{ __('Female') }}</span>
                         </label>
                     </div>
                 </div>
 
                 <div class="mt-4">
-                    <x-label for="phone" value="{{ __('Phone') }}" />
-                    <x-input id="phone" class="block mt-1 w-full" type="text" name="phone" :value="old('phone')"
-                        required autocomplete="phone" />
+                    <x-label for="stu_phone" value="{{ __('Phone') }}" />
+                    <x-input id="stu_phone" class="block mt-1 w-full" type="text" name="stu_phone" :value="old('stu_phone')"
+                        required autocomplete="stu_phone" />
                 </div>
                 <div class="mt-4">
-                    <x-label for="dob" value="{{ __('Date of Birth') }}" />
-                    <x-input id="dob" class="block mt-1 w-full" type="date" name="dob" :value="old('dob')"
-                        required autocomplete="dob" />
+                    <x-label for="stu_dob" value="{{ __('Date of Birth') }}" />
+                    <x-input id="stu_dob" class="block mt-1 w-full" type="date" name="stu_dob" :value="old('stu_dob')"
+                        required autocomplete="stu_dob" />
                 </div>
                 <div class="mt-4">
-                    <x-label for="email" value="{{ __('Email') }}" />
-                    <x-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')"
-                        required autocomplete="username" />
+                    <x-label for="stu_email" value="{{ __('Email') }}" />
+                    <x-input id="stu_email" class="block mt-1 w-full" type="email" name="stu_email" :value="old('stu_email')"
+                        required autocomplete="stu_email" />
                 </div>
                 <div class="mt-4">
-                    <x-label for="admission_date" value="{{ __('Admission Date') }}" />
-                    <x-input id="admission_date" class="block mt-1 w-full" type="date" name="admission_date" :value="old('admission_date')"
-                        required autocomplete="admission_date" />
+                    <x-label for="stu_admissionDate" value="{{ __('Admission Date') }}" />
+                    <x-input id="stu_admissionDate" class="block mt-1 w-full" type="date" name="stu_admissionDate" :value="old('stu_admissionDate')"
+                        required autocomplete="stu_admissionDate" />
                 </div>
 
                 <div class="flex items-center justify-end mt-4">

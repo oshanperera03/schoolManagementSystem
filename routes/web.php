@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\StudentController;
 
 Route::get('/', function () {
     return redirect()->route('login');
@@ -29,4 +30,5 @@ Route::middleware([
     Route::get('/teachers/create', function () {
         return view('addTeacher');
     })->name('teachers.create');
+    Route::post('save-student', [StudentController::class, 'saveStudent'])->name('student.save');
 });
