@@ -72,10 +72,14 @@
                                     <button type="button" class="btn btn-outline-primary border-0"
                                         title="Edit Student">
                                         <i class="bi bi-pencil-square"></i>
-                                    </button></a>
-                                <button type="button" class="btn btn-outline-danger border-0" title="Delete">
-                                    <i class="bi bi-trash"></i>
-                                </button>
+                                    </button>
+                                </a>
+                                <a href="{{ route('student.delete', $student->id) }}">
+                                    <button type="button" class="btn btn-outline-danger border-0" title="Delete">
+                                        <i class="bi bi-trash"></i>
+                                    </button>
+                                </a>
+                                
                             </div>
                         </td>
                     </tr>

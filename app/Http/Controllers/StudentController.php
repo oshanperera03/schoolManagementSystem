@@ -57,4 +57,10 @@ class StudentController extends Controller
         $student->update($validatedData);
         return redirect('/students');
     }
+    public function deleteStudent($id)
+    {
+        $student = $this->student->findOrFail($id);
+        $student->delete();
+        return redirect()->back();
+    }
 }

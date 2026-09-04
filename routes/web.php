@@ -31,4 +31,5 @@ Route::middleware([
     Route::post('save-teacher', [TeacherController::class, 'saveTeacher'])->name('teacher.save');
     Route::get('students/edit/{id}', [StudentController::class, 'editStudent'])->name('student.edit');
     Route::put('students/update/{id}', [StudentController::class, 'updateStudent'])->name('student.update');
+    Route::get('students/delete/{id}', [StudentController::class, 'deleteStudent'])->name('student.delete');
 });
