@@ -36,7 +36,25 @@ class StudentController extends Controller
     public function editStudent($id)
     {
         $response['student'] = $this->student->findOrFail($id);
-        return view('pages.student.editStudent')->with($response);
+        return view('pages.student.addStudent')->with($response);
     }
 
+    public function updateStudent(Request $request, $id)
+    {
+        $student = $this->student->findOrFail($id);
+
+        $validatedData = $request->validate([
+            'stu_name' => 'required|string|max:100',
+            'stu_admissionNo' => 'required|string|max:25|unique:students,stu_admissionNo,' . $student->id,
+            'stu_address' => 'required|string|max:150',
+            'stu_gender' => 'required|in:male,female',
+            'stu_phone' => 'nullable|string|max:15',
+            'stu_dob' => 'required|date',
+            'stu_email' => 'nullable|email|max:255|unique:students,stu_email,' . $student->id,
+            'stu_admissionDate' => 'required|date',
+        ]);
+
+        $student->update($validatedData);
+        return redirect('/students');
+    }
 }
