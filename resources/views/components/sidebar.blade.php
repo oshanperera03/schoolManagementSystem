@@ -44,7 +44,7 @@
                 <span class="badge bg-light text-secondary rounded-pill px-2 py-1 fs-8">42</span>
             </a>
 
-            <a href="/classes"
+            <a href="/classrooms"
                 class="nav-link d-flex align-items-center justify-content-between px-3 py-2.5 rounded-3 mb-1 text-secondary">
                 <div class="d-flex align-items-center gap-2.5">
                     <i class="bi bi-journal-bookmark-fill fs-5"></i>

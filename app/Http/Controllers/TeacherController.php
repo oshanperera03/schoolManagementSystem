@@ -33,4 +33,36 @@ class TeacherController extends Controller
         $this->teacher->create($validatedData);
         return redirect()->back();
     }
+     public function editTeacher($id)
+    {
+        $response['teacher'] = $this->teacher->findOrFail($id);
+        return view('pages.teacher.addTeacher')->with($response);
+    }
+
+    public function updateTeacher(Request $request, $id)
+    {
+        $teacher = $this->teacher->findOrFail($id);
+
+        $validatedData = $request->validate([
+            'tch_name' => 'required|string|max:100',
+            'tch_employeeId' => 'required|string|max:25|unique:teachers,tch_employeeId,' . $teacher->id,
+            'tch_subject' => 'required|string|max:100',
+            'tch_gender' => 'required|in:male,female',
+            'tch_phone' => 'nullable|string|max:15',
+            'tch_dob' => 'required|date',
+            'tch_email' => 'nullable|email|max:100|unique:teachers,tch_email,' . $teacher->id,
+            'tch_joiningDate' => 'required|date',
+        ]);
+
+        $teacher->update($validatedData);
+        return redirect('/teachers');
+    }
+    public function deleteTeacher($id)
+    {
+        $teacher = $this->teacher->findOrFail($id);
+        $teacher->delete();
+        return redirect()->back();
+    }
+
+  
 }

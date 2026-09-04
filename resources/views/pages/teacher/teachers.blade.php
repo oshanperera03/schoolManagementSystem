@@ -67,13 +67,16 @@
                         </td>
                         <td class="text-end pe-4">
                             <div class="btn-group btn-group-sm">
-
-                                <button type="button" class="btn btn-outline-primary border-0" title="Edit Teacher">
-                                    <i class="bi bi-pencil-square"></i>
-                                </button>
-                                <button type="button" class="btn btn-outline-danger border-0" title="Delete">
-                                    <i class="bi bi-trash"></i>
-                                </button>
+                                <a href="{{ route('teacher.edit', $teacher->id) }}">
+                                    <button type="button" class="btn btn-outline-primary border-0" title="Edit Teacher">
+                                        <i class="bi bi-pencil-square"></i>
+                                    </button>
+                                </a>
+                                <a href="{{ route('teacher.delete', $teacher->id) }}">
+                                    <button type="button" class="btn btn-outline-danger border-0" title="Delete">
+                                        <i class="bi bi-trash"></i>
+                                    </button>
+                                </a>
                             </div>
                         </td>
                     </tr>
